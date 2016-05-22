@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-
+# compute clrs for all gene pairs, the output are clr values.
 
 import sys
 import os
@@ -15,7 +15,7 @@ def parse_args():
     """
     ap = argparse.ArgumentParser()
     ap.add_argument('--input', type=str, 
-            help="the gene expression file")
+            help="the gene expression file without gene name")
     ap.add_argument('--output', type=str, 
             default="./step1_result.csv",
             help="the result file")
