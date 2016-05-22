@@ -1,3 +1,5 @@
+# the functions in this file will be called in clr.py to calculate clr.
+
 import math
 import numpy as np
 
