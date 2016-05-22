@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-
+#input the gene names and output all gene pair clrs.
 
 import sys
 import os
