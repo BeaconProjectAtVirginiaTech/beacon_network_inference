@@ -9,16 +9,18 @@ def parse_args():
     ap.add_argument("--negative", type=str,
     	help="negative examples")
     return ap.parse_args()
+
+args = parse_args()
 #positive examples are randomly put into child
 child = []
-with open('positive.txt') as it:
+with open(args.positive) as it:
 	for line in it:
 		child.append(line.strip())
 
 random.shuffle(child)
 # negative examples are randomly put into neg
 neg = []
-with open('negative.txt') as it:
+with open(args.negative) as it:
 	for line in it:
 		neg.append(line.strip())
 
