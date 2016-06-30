@@ -1,6 +1,14 @@
 #This file randomly split the positive and negative examples into three parts to perform in 3-fold validation.
 
 import random
+
+def parse_args():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--positive", type=str,
+    	help="positive examples")
+    ap.add_argument("--negative", type=str,
+    	help="negative examples")
+    return ap.parse_args()
 #positive examples are randomly put into child
 child = []
 with open('positive.txt') as it:
