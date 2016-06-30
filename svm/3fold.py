@@ -9,7 +9,8 @@ def parse_args():
     ap.add_argument("--negative", type=str,
     	help="negative examples")
     return ap.parse_args()
-def main:
+    
+def main():
 	args = parse_args()
 	#positive examples are randomly put into child
 	child = []
