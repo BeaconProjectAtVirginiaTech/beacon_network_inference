@@ -1,19 +1,21 @@
-import random
+#This file randomly split the positive and negative examples into three parts to perform in 3-fold validation.
 
+import random
+#positive examples are randomly put into child
 child = []
-with open('child_diff_log.txt') as it:
+with open('positive.txt') as it:
 	for line in it:
 		child.append(line.strip())
 
 random.shuffle(child)
-
+# negative examples are randomly put into neg
 neg = []
 with open('negative.txt') as it:
 	for line in it:
 		neg.append(line.strip())
 
 random.shuffle(neg)
-
+#Three positive example files are pos_1, pos_2 and pos_3. Three negative example files are neg_1, neg_2, and neg_3.
 with open('pos_1.txt', 'w') as otf, open('pos_2.txt', 'w') as otf2, open('pos_3.txt', 'w') as otf3, open('neg_1.txt', 'w') as otf4, open('neg_2.txt', 'w') as otf5, open('neg_3.txt', 'w') as otf6:
 	for i in child[:32]:
 		otf.write("%s\n" % i)
